@@ -1,0 +1,284 @@
+\documentclass[12p4, letterpaper]{article}
+
+\def\myauthor{Taylor Conners}
+\def\mytitle{tconn-Resume}
+\def\myemail{tconner0@gmail.com}
+\def\myphone{704-557-6017}
+\def\myweb{tconners087}
+\def\mykeywords{
+  taylor conners, 
+  resume, 
+  curriculum, 
+  vita, 
+  curriculum vita, 
+  cv, 
+  taylor, 
+  conners, 
+  tec
+}
+
+\setlength\parindent{0pt}
+
+
+\newenvironment{itemize*}%
+{\begin{itemize}%
+  \setlength{\itemsep}{0pt}}%
+{\end{itemize}}
+ 
+\usepackage{url}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+%\usepackage{ocgtools}
+\usepackage{enumitem}
+\setlist{nolistsep,leftmargin=0.15in}
+\usepackage[log-declarations=false]{xparse}
+\usepackage[adobe-garamond]{mathdesign}
+\usepackage[no-math]{fontspec}
+\usepackage{microtype}
+\usepackage[margin=1.125in,top=1.375in,right=1in,left=2in]{geometry}
+\usepackage[strict]{changepage}
+\usepackage[
+  ocgcolorlinks,
+  urlcolor={[rgb]{0,0,0.54}},
+  unicode,
+  plainpages=false,
+  pdfpagelabels,
+  pdftitle={\mytitle},
+  pdfauthor={\myauthor},
+  pdfkeywords={\mykeywords}
+]{hyperref}
+
+% fix ocgcolor link breaking; thanks due to Benjamin Lerner (http://goo.gl/VZKR7M)
+\makeatletter
+\AtBeginDocument{%
+  \newlength{\temp@x}%
+  \newlength{\temp@y}%
+  \newlength{\temp@w}%
+  \newlength{\temp@h}%
+  \def\my@coords#1#2#3#4{%
+    \setlength{\temp@x}{#1}%
+    \setlength{\temp@y}{#2}%
+    \setlength{\temp@w}{#3}%
+    \setlength{\temp@h}{#4}%
+    \adjustlengths{}%
+    \my@pdfliteral{\strip@pt\temp@x\space\strip@pt\temp@y\space\strip@pt\temp@w\space\strip@pt\temp@h\space re}}%
+  \ifpdf
+    \typeout{In PDF mode}%
+    \def\my@pdfliteral#1{\pdfliteral page{#1}}% I don't know why % this command...
+    \def\adjustlengths{}%
+  \fi
+  \ifxetex
+    \def\my@pdfliteral #1{\special{pdf: literal direct #1}}% isn't equivalent to this one
+    \def\adjustlengths{\setlength{\temp@h}{-\temp@h}\addtolength{\temp@y}{1in}\addtolength{\temp@x}{-1in}}%
+  \fi%
+  \def\Hy@colorlink#1{%
+    \begingroup
+      \ifHy@ocgcolorlinks
+        \def\Hy@ocgcolor{#1}%
+        \my@pdfliteral{q}%
+        \my@pdfliteral{7 Tr}% Set text mode to clipping-only
+      \else
+        \HyColor@UseColor#1%
+      \fi
+}%
+ \def\Hy@endcolorlink{%
+    \ifHy@ocgcolorlinks%
+      \my@pdfliteral{/OC/OCPrint BDC}%
+      \my@coords{0pt}{0pt}{\pdfpagewidth}{\pdfpageheight}%
+      \my@pdfliteral{F}% Fill clipping path (the url's text) with current color
+      \my@pdfliteral{EMC/OC/OCView BDC}%
+      \begingroup%
+        \expandafter\HyColor@UseColor\Hy@ocgcolor%
+        \my@coords{0pt}{0pt}{\pdfpagewidth}{\pdfpageheight}%
+        \my@pdfliteral{F}% Fill clipping path (the url's text) with \Hy@ocgcolor
+      \endgroup%
+      \my@pdfliteral{EMC}%
+      \my@pdfliteral{0 Tr}% Reset text to normal mode
+      \my@pdfliteral{Q}%
+    \fi
+    \endgroup
+  }%
+}
+\makeatother
+% end fixes
+
+
+\newcommand{\ML}{\textsc{Matlab}}
+\newcommand{\Simu}{Simulink}
+\newcommand{\MLS}{\ML{}/\Simu{}}
+\newcommand{\apdl}{\textsc{APDL}}
+\newcommand{\ansys}{\textsc{Ansys}}
+\newcommand{\fluent}{\textsc{Fluent}}
+\newcommand\CPP{C/C\ensuremath{+}\ensuremath{+}}
+\newcommand{\Star}{\textsc{Star-CCM\ensuremath{+}}}
+
+\newcommand{\mhead}[1]{\leavevmode\marginpar{\sffamily\footnotesize #1}}
+\newcommand{\rdate}[1]{{\addfontfeature{Numbers=OldStyle} \hfill #1}}
+\renewcommand{\date}[1]{{\addfontfeature{Numbers=OldStyle} #1}}
+\renewcommand{\labelitemi}{-} 
+
+%\setmainfont[
+  %Ligatures={TeX,Common},
+  %BoldFont={AGaramondPro-Semibold},
+%]{Adobe Garamond Pro}
+%\setsansfont[
+  %Ligatures={TeX,Common},
+  %Letters=SmallCaps,
+  %Color=660000,
+%]{Adobe Garamond Pro}
+%\setmonofont[Scale=0.85]{FontAwesome}
+
+\makeatletter % fix for \hrulefill w/ mathdesign package
+\def\hrulefill{\leavevmode\leaders \hrule height \rulethickness \hfill\kern\z@}
+\makeatletter
+
+\begin{document}
+%----------------------------------------------------------------------------------------------------------------------------
+% PAGE STYLE
+%----------------------------------------------------------------------------------------------------------------------------
+\pagestyle{fancy} \setlength\headwidth{6.5in}
+\rhead{\textsc{taylor e.~conners—r\'{e}sum\'{e}—\thepage{} of \pageref*{LastPage}}} \cfoot{}
+\thispagestyle{empty}
+
+%----------------------------------------------------------------------------------------------------------------------------
+% BEGIN HEADER
+%----------------------------------------------------------------------------------------------------------------------------
+\begin{adjustwidth}{-1in}{}
+
+{\Huge
+  {\textsc{%
+    {\addfontfeature{Style=TitlingCaps}T}\kern-1.5ptaylor
+    {\addfontfeature{Style=TitlingCaps}E}\kern-2pt.~%
+    {\addfontfeature{Style=TitlingCaps}C}onners}
+  }
+}
+
+\hfill\hfill\hfill
+
+%----------------------------------------------------------------------------------------------------------------------------
+% HEADER CONTENT
+%----------------------------------------------------------------------------------------------------------------------------
+{
+	\begin{minipage}[b]{2in}
+		\flushleft \footnotesize 
+		3570 Toringdon Way \\ 
+		Apartment 1079 \\ 
+		Charlotte, NC~~28277
+	\end{minipage}
+	\hfill
+	\begin{minipage}[b]{1.2in}
+		\flushright \footnotesize 
+		\href{tel:\myphone}{\myphone} \\ %\texttt{}~
+		\href{mailto:\myemail}{\myemail} \\
+		\href{https://www.github.com/\myweb}{\texttt{}}~\href{https://www.linkedin.com/in/\myweb}{\texttt{}~\myweb}
+	\end{minipage}
+}\par
+\hrulefill
+\end{adjustwidth}
+%----------------------------------------------------------------------------------------------------------------------------
+% END HEADER
+%----------------------------------------------------------------------------------------------------------------------------
+
+
+
+%----------------------------------------------------------------------------------------------------------------------------
+% EDUCATION
+%----------------------------------------------------------------------------------------------------------------------------
+\reversemarginpar
+\setlength\marginparwidth{0.85in}
+\smallskip
+\mhead{Education}%
+\textbf{UNCC} - 
+\textbf{University of North Carolina at Charlotte} \newline
+\emph{Master of Science, \href{https://cci.uncc.edu/academics/computer-science/masters-programs}{Computer Science}} \rdate{Fall 2018}
+\begin{itemize*}
+  \item Cumulative GPA: 3.90/4.00; {Data Science and Management Specialization}
+  \item Advisors: Dr.~Dewan~Ahmed and Prof.~Richard~Ilson
+\end{itemize*}
+
+\medskip
+\textbf{UNCC} - 
+\textbf{University of North Carolina at Charlotte} \newline
+\emph{Bachelor of Science, \href{https://cci.uncc.edu/academics/computer-science/undergraduate-programs}{Computer Science}} \rdate{Fall 2017}
+\begin{itemize*}
+  \item Cumulative GPA: 3.88/4.00; \href{https://languages.uncc.edu/undergraduate-programs/spanish}{Spanish Minor}
+  \item Advisors: Dr.~Julio~Bahamon and Prof.~Richard~Ilson
+\end{itemize*}
+
+%----------------------------------------------------------------------------------------------------------------------------
+% SOFTWARE PROFICIENCIES
+%----------------------------------------------------------------------------------------------------------------------------
+
+\bigskip
+\mhead{Software \newline Proficiencies}%
+%\emph{Working Knowledge}\newline%—comfortable using in a professional setting
+Git,
+Visual Studio,
+C\#,
+CPP,
+C,
+JavaScript, 
+Java,
+Mentor Graphics,
+NodeJS,
+MongoDB,
+Python,
+MySQL,
+Ubuntu, 
+Windows,
+\LaTeX{}
+
+\bigskip
+\mhead{Honors \& \newline Awards}%
+Dean's List, All Semesters - University of North Carolina at Charlotte \rdate{2015 - 2018}\newline
+Chancellor's List - University of North Carolina at Charlotte \rdate{2017} \newline
+Magna Cum Laude - University of North Carolina at Charlotte \rdate{2018}
+
+\bigskip
+\mhead{Employment \newline Experience}%
+\emph{Full employment history available upon request.} \medskip
+
+\emph{Graduate Assistant for ITSC-3181: Introduction to Computer Architecture}\newline
+\textbf{University of North Carolina at Charlotte,}  \rdate{[\textsc{August}~2018 – \textsc{December}~2018]}\newline
+9201  University City Blvd, Charlotte, NC, 28223
+\begin{itemize*}
+  \item Managed a team of undergraduate Teaching Assistants for \emph{ITSC-3181L: Computer Architecture Lab and Recitation}. 
+  \item Taught undergraduate TAs the fundamentals of Mentor Graphics \emph{Xpedition VX2.3} software for use in lab sessions.
+  \item Corresponded with the class of more than \emph{100} students to explain lecture material for exams and quizzes.
+  \item Administered and graded all exams and quizzes throughout the semester.
+\end{itemize*}
+
+\medskip
+
+\emph{Teaching Assistant for ITSC-3181L: Computer Architecture Lab and Recitation}\newline
+\textbf{University of North Carolina at Charlotte,}  \rdate{[\textsc{September}~2016 – \textsc{December}~2018]}\newline
+9201  University City Blvd, Charlotte, NC, 28223
+\begin{itemize*}
+  \item Administered lab sessions to reinforce student understanding of material covered in \emph{ITSC-3181: Introduction to Computer Architecture}. 
+  \item Taught fundamentals of binary logic through building and simulating schematic designs of basic components, such as bitwise adders, multipliers, and ALUs.
+  \item Introduced undergraduate students to core concepts of C and Assembly programming.
+  \item Ran \emph{1 - 2} hour recitation sessions in which all lecture sessions were invited to attend and ask questions.
+\end{itemize*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
