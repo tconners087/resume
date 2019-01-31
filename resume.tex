@@ -34,7 +34,8 @@
 \usepackage[log-declarations=false]{xparse}
 \usepackage[no-math]{fontspec}
 \usepackage{microtype}
-\usepackage[margin=1.125in,top=1.375in,right=1in,left=2in]{geometry}
+% \usepackage[margin=1.125in,top=1.375in,right=1in,left=2in]{geometry}
+\usepackage[margin=1.000in,top=1.25in,right=1in,left=2in]{geometry}%HERE
 \usepackage[strict]{changepage}
 \usepackage[
 	ocgcolorlinks,
@@ -59,7 +60,7 @@
 
 \newcommand\CPP{C/C\ensuremath{+}\ensuremath{+}}
 \newcommand{\mhead}[1]{\leavevmode\marginpar{\sffamily\footnotesize #1}}
-\newcommand{\rdate}[1]{{\addfontfeature{Numbers=OldStyle} \hfill #1}}
+\newcommand{\rdate}[1]{{\addfontfeature{Numbers=OldStyle} \hfill \sffamily\footnotesize ---#1}}
 \renewcommand{\date}[1]{{\addfontfeature{Numbers=OldStyle} #1}}
 \renewcommand{\labelitemi}{-} 
 
@@ -145,7 +146,7 @@
 %----------------------------------------------------------------------------------------------------------------------------
 % BEGIN HEADER
 %----------------------------------------------------------------------------------------------------------------------------
-\setlength{\headsep}{0.0in}
+\setlength{\headsep}{0.1625in}
 \begin{adjustwidth}{-1in}{}
 {\Huge
 	{\textsc{%
@@ -181,16 +182,14 @@
 %----------------------------------------------------------------------------------------------------------------------------
 % EDUCATION
 %----------------------------------------------------------------------------------------------------------------------------
-
-
 \smallskip
 \mhead{Education}%
 %\textbf{UNCC} - 
 \textbf{University of North Carolina at Charlotte} \rdate{December 2018} \newline
 \emph{Master of Science, \href{https://cci.uncc.edu/academics/computer-science/masters-programs}{Computer Science}} 
 \begin{itemize*}
-  \item Cumulative GPA: 3.90/4.00; {Data Science and Management Specialization}
-  %\item Advisors: Dr.~Dewan~Ahmed and Prof.~Richard~Ilson
+  \item Cumulative GPA: 3.90/4.00; \href{https://cci.uncc.edu/academics/computer-science/masters-program/ms-requirements}{Data Science and Management Specialization}
+  \item Advisors: Dr.~Dewan~Ahmed and Prof.~Richard~Ilson
 \end{itemize*}
 
 \smallskip
@@ -199,7 +198,7 @@
 \emph{Bachelor of Science, \href{https://cci.uncc.edu/academics/computer-science/undergraduate-programs}{Computer Science}} 
 \begin{itemize*}
   \item Cumulative GPA: 3.88/4.00; \href{https://languages.uncc.edu/undergraduate-programs/spanish}{Spanish Minor}
-  %\item Advisors: Dr.~Julio~Bahamon and Prof.~Richard~Ilson
+  \item Advisors: Dr.~Julio~Bahamon and Prof.~Richard~Ilson
 \end{itemize*}
 
 %----------------------------------------------------------------------------------------------------------------------------
@@ -207,20 +206,8 @@
 %----------------------------------------------------------------------------------------------------------------------------
 \bigskip
 \mhead{Software \newline Proficiencies}%
-Git,
-Visual Studio,
-C\#,
-\CPP,
-JavaScript, 
-Java,
-Mentor Graphics,
-NodeJS,
-MongoDB,
-Python,
-MySQL,
-Ubuntu, 
-Windows,
-\LaTeX{}
+Git, C\#, \CPP, JavaScript, NodeJS, Java, Python, Xpedition Enterprise VX2.3, MongoDB, MySQL, Ubuntu, Windows, \LaTeX{}, Visual Studio, 
+Visual Studio Code
 
 %----------------------------------------------------------------------------------------------------------------------------
 % Honors/Awards
@@ -241,7 +228,6 @@ Magna Cum Laude - University of North Carolina at Charlotte %\rdate{2018}
 \textbf{University of North Carolina at Charlotte}  \rdate{August~2018 – December~2018}\newline
 9201  University City Blvd, Charlotte, NC, 28223 \newline
 \emph{Graduate Assistant for ITSC-3181: Introduction to Computer Architecture}
-
 \begin{itemize*}
   	\item Managed a team of undergraduate Teaching Assistants for \emph{ITSC-3181L: Computer Architecture Lab and Recitation}. 
   	\item Taught undergraduate TAs the fundamentals of Mentor Graphics \emph{Xpedition VX2.3} software for use in lab sessions.
@@ -253,7 +239,6 @@ Magna Cum Laude - University of North Carolina at Charlotte %\rdate{2018}
 \textbf{University of North Carolina at Charlotte}  \rdate{September~2016 – December~2018}\newline
 9201  University City Blvd, Charlotte, NC, 28223\newline
 \emph{Teaching Assistant for ITSC-3181L: Computer Architecture Lab and Recitation}
-
 \begin{itemize*}
 	\item Administered lab sessions to reinforce student understanding of material covered in \emph{ITSC-3181: Introduction to Computer Architecture}. 
 	\item Coached fundamentals of binary logic through building and simulating schematic designs of bitwise adders, multipliers, ALUs, etc.
@@ -268,8 +253,8 @@ Magna Cum Laude - University of North Carolina at Charlotte %\rdate{2018}
 \mhead{Projects}%
 \textbf{\emph{More projects available on github}}\smallskip
 
-\emph{Enterprise Application for Employee Onboarding and Social Networking at Continental AG}\newline
-\textbf{ITCS-6112 Software Systems Design and Implementation} (UNCC - Fall 2017)
+\textbf{ITCS-6112 Software Systems Design and Implementation} (UNCC) \rdate{Fall Semester 2017}\newline
+\emph{Enterprise Application for Employee Onboarding and Social Networking at Continental AG}
 \begin{itemize*}
 	\item{Prototyped employee onboarding system wherein new employees were connected to existing employees by an interest-compatibility matching algorithm.}
 	\item{Designed a mobile interface for employees to send emails, schedule meetings, organize social events, and develop a customized profile.}
