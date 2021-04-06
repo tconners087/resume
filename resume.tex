@@ -35,7 +35,7 @@
 \usepackage[no-math]{fontspec}
 \usepackage{microtype}
 % \usepackage[margin=1.125in,top=1.375in,right=1in,left=2in]{geometry}
-\usepackage[margin=1.000in,top=1.25in,right=1in,left=2in]{geometry}%HERE
+\usepackage[margin=1.000in,top=1.00in,right=0.75in,left=1.75in]{geometry}%HERE
 \usepackage[strict]{changepage}
 \usepackage[
 	ocgcolorlinks,
@@ -59,7 +59,8 @@
 {\begin{itemize}\setlength{\itemsep}{0pt}}{\end{itemize}}
 
 \newcommand\CPP{C/C\ensuremath{+}\ensuremath{+}}
-\newcommand{\mhead}[1]{\leavevmode\marginpar{\sffamily\footnotesize #1}}
+%\newcommand{\mhead}[1]{\leavevmode\marginpar{\sffamily\footnotesize #1}}
+\newcommand{\mhead}[1]{\marginpar{\sffamily\footnotesize #1}}
 \newcommand{\rdate}[1]{{\addfontfeature{Numbers=OldStyle} \hfill \sffamily\footnotesize #1}}
 \renewcommand{\date}[1]{{\addfontfeature{Numbers=OldStyle} #1}}
 \renewcommand{\labelitemi}{-} 
@@ -185,21 +186,29 @@
 \bigskip
 \mhead{Professional \newline Experience}%
 %\textbf{\emph{Full employment history available upon request}} \smallskip
-\textbf{FDM Group}  \rdate{May~2019 – Current}\newline
+\textbf{FDMGroup}  \rdate{May~2019 – Current}\newline
+14 Wall Street, New York, New York, 10005 \newline
+\emph{Java Development Consultant (\textbf{See Below for Placement Experience})} 
+\smallskip
+%\newline
+\begin{adjustwidth}{0.25in}{}
+\textbf{Citi - Prime Finance Reporting}  \rdate{July~2019 – Current}\newline
 3800 Citibank Center, Tampa, FL 33610 \newline
-\emph{Application Programmer Lead for Citi - Prime Finance Reporting}
+\emph{Application Programmer Lead}
 \begin{itemize*}
 	\item Engineered and implemented a solution to move a legacy report archival system from a series of redundant NAS disks and tape backup to Amazon S3 storage, allowing clients access to an expanded date-range of financial documents without the need for support intervention or document recovery.
-	\item Helped migrate my team's existing services from Red Hat Linux 5 to Red Had Linux 7.
+	\item Performed a full server migration from RHEL5 to RHEL7, which involved migrating all existing production services and performing upstream/downstream checks against other Citi enterprise applications to ensure a seamless client experience.
+	\item Worked to modify and enhance legacy code to patch long-standing bugs and respond to client/business requests for new features. 
+	\item Developed a rapport with client-facing representatives and production support identify our platform's shortcomings and develop quick solutions.
 \end{itemize*}
+\end{adjustwidth}
 \medskip
 
 \textbf{University of North Carolina at Charlotte}  \rdate{September~2016 – December~2018}\newline
 9201  University City Blvd, Charlotte, NC, 28223 \newline
-\emph{Graduate Assistant for ITSC-3181: Introduction to Computer Architecture \newline Teaching Assistant for ITSC-3181L: Computer Architecture Lab and Recitation}
+\emph{Graduate/Teaching Assistant for ITSC-3181: Introduction to Computer Architecture}
 \begin{itemize*}
 	\item Managed a team of undergraduate Teaching Assistants for \emph{ITSC-3181L: Computer Architecture Lab and Recitation}. 
-	\item Corresponded with the class of more than \emph{100} students to explain lecture material for exams and quizzes.
 	\item Coached fundamentals of binary logic through building and simulating schematic designs of bitwise adders, multipliers, ALUs, etc.
 	\item Introduced undergraduate students to core concepts of C and Assembly programming.
 	\item Ran \emph{1 - 2} hour recitation sessions in which all lecture sessions were invited to attend.
@@ -220,13 +229,13 @@ Magna Cum Laude - University of North Carolina at Charlotte \rdate{2018}
 %----------------------------------------------------------------------------------------------------------------------------
 \bigskip
 \mhead{Software \newline Proficiencies}%
-Java, Git, Microsoft SQL Server, Unix, RedHat OpenShift Container Platform, IBM UrbanCode Deploy, JIRA, Python, JavaScript, NodeJS, MongoDB
+Java, Spring, Git, Microsoft SQL Server, Unix, RedHat OpenShift Container Platform, IBM UrbanCode Deploy, JIRA, JasperReports, Python, JavaScript, NodeJS, MongoDB
 
 
 %----------------------------------------------------------------------------------------------------------------------------
 % EDUCATION
 %----------------------------------------------------------------------------------------------------------------------------
-\smallskip
+\bigskip
 \mhead{Education}%
 %\textbf{UNCC} - 
 \textbf{University of North Carolina at Charlotte} \rdate{December 2018} \newline
@@ -248,15 +257,12 @@ Java, Git, Microsoft SQL Server, Unix, RedHat OpenShift Container Platform, IBM 
 %----------------------------------------------------------------------------------------------------------------------------
 \bigskip
 \mhead{Projects}%
-\textbf{\emph{More projects available on github}}\smallskip
 
 \textbf{ITCS-6112 Software Systems Design and Implementation} (UNCC) \rdate{Fall Semester 2017}\newline
 \emph{Enterprise Application for Employee Onboarding and Social Networking for \href{https://www.continental-corporation.com/en}{Continental AG}}
 \begin{itemize*}
 	\item{Prototyped employee onboarding system wherein new employees were connected to existing employees by an interest-compatibility matching algorithm.}
-	\item{Designed a mobile interface for employees to send emails, schedule meetings, organize social events, and develop a customized profile.}
 	\item{Implemented backend APIs using NodeJS and MongoDB for database management of Administrators, Employees, Onboarding Tasks, Employee Profiles, etc.}
-	\item{Modified existing desktop application prototype to allow Administrators to easily match new-hires with compatible employees.}
 \end{itemize*}
 
 \end{document}
